@@ -93,7 +93,3 @@ Email is valid.
 - All logic implemented using native Python.
 
 ---
-
-## © License
-
-You can use or modify this code freely for learning or educational purposes.
