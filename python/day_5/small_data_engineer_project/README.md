@@ -63,7 +63,3 @@ invalid@com
 ```
 
 ---
-
-## 📄 License
-
-Free to use for educational and testing purposes.
