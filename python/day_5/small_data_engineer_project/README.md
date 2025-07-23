@@ -74,24 +74,3 @@ pip install requests
 ```
 
 ---
-
-## 🧠 Notes
-
-- Duplicate emails are checked case-insensitively
-- Existing CSV files act as a storage memory
-- You can extend this pipeline to support database storage, logging, or dashboards
-
----
-
-## 📌 Future Ideas
-
-- Store data in PostgreSQL or MongoDB
-- Add logging using the `logging` module
-- Visualize email domain distributions (e.g., pie chart of gmail vs yahoo)
-
----
-
-## 🧑‍💻 Author
-
-Mostafa Mohamed – 2025  
-Data Engineering Practice Project
