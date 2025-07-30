@@ -43,7 +43,7 @@ The project simulates Samy's (and other employees') day-to-day life including sl
 
 ## 🧪 Testing
 
-The `main.py` or your test file includes scenarios like:
+The `main.py` includes scenarios like:
 - Hiring employees
 - Driving cars to work
 - Checking if employees are late
