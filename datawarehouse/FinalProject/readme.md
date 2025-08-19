@@ -22,7 +22,16 @@ This project is a **complete data engineering pipeline** using **dbt (Data Build
 │──  seeds/                  # Sample seed data for dbt
 │──  macros/                 # dbt macros
 │──  dbt_project.yml         # dbt project config file
+
+ airflow-docker/
+│──  dags/                   # Airflow DAGs (for scheduling)
+│──  logs/                   # Airflow logs
+
+ FinalProjecr/
+│──  snowflake_data_project  
+│──   airflow-docker               
 │──  README.md               # Project documentation
+
 ```
 
 
