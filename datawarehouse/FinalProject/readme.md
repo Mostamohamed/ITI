@@ -27,7 +27,7 @@ This project is a **complete data engineering pipeline** using **dbt (Data Build
 │──  dags/                   # Airflow DAGs (for scheduling)
 │──  logs/                   # Airflow logs
 
- FinalProjecr/
+ FinalProject/
 │──  snowflake_data_project  
 │──   airflow-docker               
 │──  README.md               # Project documentation
