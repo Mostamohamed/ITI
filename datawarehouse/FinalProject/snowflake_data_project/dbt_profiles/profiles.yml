@@ -1,0 +1,15 @@
+snowflake_data_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: es09055.me_central2.gcp
+      database: FINANCE_DB
+      password: atY@01212263766
+      role: ACCOUNTADMIN
+      schema: RAW
+      threads: 4
+      type: snowflake
+      user: MOSTAFAMOHAMED
+      warehouse: FINANCE_WH
+      
