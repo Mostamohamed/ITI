@@ -71,7 +71,8 @@ Start Apache Airflow
 ```sh
 airflow standalone  # Starts the UI & Scheduler
 ```
-
-
-
+RUN
+```sh
+![Alt text for image](Docs/image.png) 
+```
 
