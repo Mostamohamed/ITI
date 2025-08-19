@@ -1,0 +1,63 @@
+[2025-08-19T00:06:52.596+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-08-19T00:06:52.610+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_workflow.dbt_run scheduled__2025-08-18T00:00:00+00:00 [queued]>
+[2025-08-19T00:06:52.620+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_workflow.dbt_run scheduled__2025-08-18T00:00:00+00:00 [queued]>
+[2025-08-19T00:06:52.620+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-08-19T00:06:52.636+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_run> on 2025-08-18 00:00:00+00:00
+[2025-08-19T00:06:52.645+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=63) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-08-19T00:06:52.649+0000] {standard_task_runner.py:72} INFO - Started process 71 to run task
+[2025-08-19T00:06:52.649+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dbt_workflow', 'dbt_run', 'scheduled__2025-08-18T00:00:00+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dag.py', '--cfg-path', '/tmp/tmpkut6q14p']
+[2025-08-19T00:06:52.650+0000] {standard_task_runner.py:105} INFO - Job 82: Subtask dbt_run
+[2025-08-19T00:06:52.721+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_workflow.dbt_run scheduled__2025-08-18T00:00:00+00:00 [running]> on host 6dbc676d3486
+[2025-08-19T00:06:52.817+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_workflow' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-08-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-18T00:00:00+00:00'
+[2025-08-19T00:06:52.819+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-08-19T00:06:52.820+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-08-19T00:06:52.820+0000] {logging_mixin.py:190} INFO - Current task name:dbt_run state:running start_date:2025-08-19 00:06:52.611284+00:00
+[2025-08-19T00:06:52.821+0000] {logging_mixin.py:190} INFO - Dag name:dbt_workflow and current dag run status:running
+[2025-08-19T00:06:52.821+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-08-19T00:06:52.823+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-19T00:06:52.824+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dwh_project/snowflake_data_project && dbt run --profiles-dir /opt/***/dwh_project/snowflake_data_project/.dbt']
+[2025-08-19T00:06:52.840+0000] {subprocess.py:86} INFO - Output:
+[2025-08-19T00:06:56.015+0000] {subprocess.py:93} INFO - [0m00:06:56  Running with dbt=1.10.9
+[2025-08-19T00:06:56.025+0000] {subprocess.py:93} INFO - [0m00:06:56  Encountered an error:
+[2025-08-19T00:06:56.026+0000] {subprocess.py:93} INFO - Runtime Error
+[2025-08-19T00:06:56.026+0000] {subprocess.py:93} INFO -   Could not find profile named 'snowflake_data_project'
+[2025-08-19T00:06:59.636+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-08-19T00:06:59.643+0000] {process_utils.py:132} INFO - Sending 15 to group 71. PIDs of all processes in the group: [75, 71]
+[2025-08-19T00:06:59.652+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 71
+[2025-08-19T00:06:59.659+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-08-19T00:06:59.663+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-08-19T00:06:59.731+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 240, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-08-19T00:06:59.743+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-08-19T00:06:59.744+0000] {logging_mixin.py:190} INFO - Task start:2025-08-19 00:06:52.611284+00:00 end:2025-08-19 00:06:59.741915+00:00 duration:7.130631
+[2025-08-19T00:06:59.744+0000] {logging_mixin.py:190} INFO - Task:<Task(BashOperator): dbt_run> dag:<DAG: dbt_workflow> dagrun:<DagRun dbt_workflow @ 2025-08-18 00:00:00+00:00: scheduled__2025-08-18T00:00:00+00:00, state:running, queued_at: 2025-08-19 00:00:00.923292+00:00. externally triggered: False>
+[2025-08-19T00:06:59.745+0000] {logging_mixin.py:190} INFO - Failure caused by Task received SIGTERM signal
+[2025-08-19T00:06:59.745+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dbt_workflow, task_id=dbt_run, run_id=scheduled__2025-08-18T00:00:00+00:00, execution_date=20250818T000000, start_date=20250819T000652, end_date=20250819T000659
+[2025-08-19T00:06:59.763+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-08-19T00:06:59.798+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=71, status='terminated', exitcode=2, started='00:06:52') (71) terminated with exit code 2
+[2025-08-19T00:06:59.799+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=75, status='terminated', started='00:06:52') (75) terminated with exit code None
+[2025-08-19T00:06:59.800+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 143
+[2025-08-19T00:06:59.828+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,47 @@
+[2025-08-19T11:43:19.776+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-08-19T11:43:19.796+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_workflow.dbt_test manual__2025-08-19T11:42:48.643779+00:00 [queued]>
+[2025-08-19T11:43:19.805+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_workflow.dbt_test manual__2025-08-19T11:42:48.643779+00:00 [queued]>
+[2025-08-19T11:43:19.806+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-08-19T11:43:19.820+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_test> on 2025-08-19 11:42:48.643779+00:00
+[2025-08-19T11:43:19.827+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=366) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-08-19T11:43:19.830+0000] {standard_task_runner.py:72} INFO - Started process 368 to run task
+[2025-08-19T11:43:19.829+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dbt_workflow', 'dbt_test', 'manual__2025-08-19T11:42:48.643779+00:00', '--job-id', '101', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dag.py', '--cfg-path', '/tmp/tmpaxq_4z1u']
+[2025-08-19T11:43:19.831+0000] {standard_task_runner.py:105} INFO - Job 101: Subtask dbt_test
+[2025-08-19T11:43:19.885+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_workflow.dbt_test manual__2025-08-19T11:42:48.643779+00:00 [running]> on host ae4c81986ed9
+[2025-08-19T11:43:19.954+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_workflow' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2025-08-19T11:42:48.643779+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-19T11:42:48.643779+00:00'
+[2025-08-19T11:43:19.956+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-08-19T11:43:19.957+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-08-19T11:43:19.957+0000] {logging_mixin.py:190} INFO - Current task name:dbt_test state:running start_date:2025-08-19 11:43:19.796866+00:00
+[2025-08-19T11:43:19.958+0000] {logging_mixin.py:190} INFO - Dag name:dbt_workflow and current dag run status:running
+[2025-08-19T11:43:19.958+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-08-19T11:43:19.959+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-19T11:43:19.960+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dwh_project && dbt test']
+[2025-08-19T11:43:19.972+0000] {subprocess.py:86} INFO - Output:
+[2025-08-19T11:43:22.127+0000] {subprocess.py:93} INFO - [0m11:43:22  Running with dbt=1.9.0
+[2025-08-19T11:43:23.108+0000] {subprocess.py:93} INFO - [0m11:43:23  Registered adapter: snowflake=1.9.0
+[2025-08-19T11:43:23.680+0000] {subprocess.py:93} INFO - [0m11:43:23  Found 5 models, 2 data tests, 4 sources, 473 macros
+[2025-08-19T11:43:23.683+0000] {subprocess.py:93} INFO - [0m11:43:23
+[2025-08-19T11:43:23.684+0000] {subprocess.py:93} INFO - [0m11:43:23  Concurrency: 4 threads (target='dev')
+[2025-08-19T11:43:23.685+0000] {subprocess.py:93} INFO - [0m11:43:23
+[2025-08-19T11:43:24.738+0000] {subprocess.py:93} INFO - [0m11:43:24  1 of 2 START test accepted_values_stg_orders_order_status__Completed__Pending__Cancelled  [RUN]
+[2025-08-19T11:43:24.739+0000] {subprocess.py:93} INFO - [0m11:43:24  2 of 2 START test unique_stg_customers_customer_id ............................. [RUN]
+[2025-08-19T11:43:25.383+0000] {subprocess.py:93} INFO - [0m11:43:25  1 of 2 PASS accepted_values_stg_orders_order_status__Completed__Pending__Cancelled  [[32mPASS[0m in 0.64s]
+[2025-08-19T11:43:26.307+0000] {subprocess.py:93} INFO - [0m11:43:26  2 of 2 PASS unique_stg_customers_customer_id ................................... [[32mPASS[0m in 1.57s]
+[2025-08-19T11:43:31.453+0000] {subprocess.py:93} INFO - [0m11:43:31
+[2025-08-19T11:43:31.454+0000] {subprocess.py:93} INFO - [0m11:43:31  Finished running 2 data tests in 0 hours 0 minutes and 7.77 seconds (7.77s).
+[2025-08-19T11:43:31.588+0000] {subprocess.py:93} INFO - [0m11:43:31
+[2025-08-19T11:43:31.589+0000] {subprocess.py:93} INFO - [0m11:43:31  [32mCompleted successfully[0m
+[2025-08-19T11:43:31.589+0000] {subprocess.py:93} INFO - [0m11:43:31
+[2025-08-19T11:43:31.590+0000] {subprocess.py:93} INFO - [0m11:43:31  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2025-08-19T11:43:36.716+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-19T11:43:36.768+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-08-19T11:43:36.769+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dbt_workflow, task_id=dbt_test, run_id=manual__2025-08-19T11:42:48.643779+00:00, execution_date=20250819T114248, start_date=20250819T114319, end_date=20250819T114336
+[2025-08-19T11:43:36.785+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-08-19T11:43:36.787+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-08-19T11:43:36.788+0000] {logging_mixin.py:190} INFO - Dag name:dbt_workflow queued_at:2025-08-19 11:42:48.660774+00:00
+[2025-08-19T11:43:36.789+0000] {logging_mixin.py:190} INFO - Task hostname:ae4c81986ed9 operator:BashOperator
+[2025-08-19T11:43:36.826+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-08-19T11:43:36.853+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-19T11:43:36.856+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
