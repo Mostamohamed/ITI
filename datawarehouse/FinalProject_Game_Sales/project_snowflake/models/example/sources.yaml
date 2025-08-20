@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: RAW
+    database: FINALPROJECT    # Snowflake database
+    schema: RAW             # Schema where raw data is stored
+    tables:
+      - name: DATABEFORE

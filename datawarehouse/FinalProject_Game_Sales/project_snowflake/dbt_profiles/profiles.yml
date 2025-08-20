@@ -1,0 +1,13 @@
+project_snowflake:
+  outputs:
+    dev:
+      account: RNJTPPB-JHB70739
+      database: FINALPROJECT
+      password: atY@01212263766
+      role: ACCOUNTADMIN
+      schema: RAW
+      threads: 4
+      type: snowflake
+      user: MOSTAFAMOHAMED
+      warehouse: COMPUTE_WH
+  target: dev
