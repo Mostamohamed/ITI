@@ -68,9 +68,8 @@ Start Apache Airflow
 ```sh
 airflow standalone  # Starts the UI & Scheduler
 ```
-RUN
 
 ![Star Schema](Docs/Schema.png) 
-![Presentation](Docs/presentation/) 
+![Presentation](Docs/presentation/presentation.pdf) 
 
 
