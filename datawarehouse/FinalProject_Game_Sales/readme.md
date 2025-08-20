@@ -75,5 +75,5 @@ airflow standalone  # Starts the UI & Scheduler
 
 Presentation
 
-Docs/presentation/presentation.pdf
+![](Docs/presentation/presentation.pdf)
 
