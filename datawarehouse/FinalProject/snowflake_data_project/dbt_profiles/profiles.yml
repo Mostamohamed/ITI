@@ -5,7 +5,7 @@ snowflake_data_project:
       type: snowflake
       account: es09055.me_central2.gcp
       database: FINANCE_DB
-      password: atY@01212263766
+      password: ***********
       role: ACCOUNTADMIN
       schema: RAW
       threads: 4
@@ -13,3 +13,4 @@ snowflake_data_project:
       user: MOSTAFAMOHAMED
       warehouse: FINANCE_WH
       
+
