@@ -70,7 +70,7 @@ airflow standalone  # Starts the UI & Scheduler
 ```
 RUN
 
-![Star Schema](Docs/Schema.drawio) 
+![Star Schema](Docs/Schema.png) 
 ![Presentation](Docs/presentation/) 
 
 
