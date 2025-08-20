@@ -3,11 +3,12 @@ project_snowflake:
     dev:
       account: RNJTPPB-JHB70739
       database: FINALPROJECT
-      password: atY@01212263766
+      password: ******************
       role: ACCOUNTADMIN
       schema: RAW
       threads: 4
       type: snowflake
       user: MOSTAFAMOHAMED
       warehouse: COMPUTE_WH
+
   target: dev
