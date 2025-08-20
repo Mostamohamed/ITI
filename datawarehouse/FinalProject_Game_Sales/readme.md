@@ -43,6 +43,7 @@ venv\Scripts\activate     # Windows
 ```
 
 ##Configure dbt Connection to Snowflake
+
 Update the profiles.yml file located in ~/.dbt/ with your Snowflake credentials:
 ```sh
 snowflake_project:
@@ -58,13 +59,16 @@ snowflake_project:
       type: snowflake
   target: dev
 ```
+
 ##Run dbt Models
+
 ```sh
 dbt run
 dbt test  # To validate data integrity
 ```
 
 ##Start Apache Airflow
+
 ```sh
 airflow standalone  # Starts the UI & Scheduler
 ```
@@ -72,5 +76,6 @@ airflow standalone  # Starts the UI & Scheduler
 ![Star Schema](Docs/Schema.png) 
 
 ##Presentation
+
 Docs/presentation/presentation.pdf
 
