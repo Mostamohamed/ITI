@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:output method="text" encoding="UTF-8"/>
+
+  <xsl:variable name="delimiter" select="','"/>
+  <xsl:variable name="newline" select="'&#xA;'"/> <xsl:template match="/">
+    
+    <xsl:text>SID,firstName,lastName,date</xsl:text>
+    <xsl:value-of select="$newline"/>
+
+    <xsl:apply-templates select="students/student"/>
+    
+  </xsl:template>
+
+  <xsl:template match="student">
+    <xsl:value-of select="@SID"/>
+    <xsl:value-of select="$delimiter"/>
+    
+    <xsl:value-of select="firstName"/>
+    <xsl:value-of select="$delimiter"/>
+    
+    <xsl:value-of select="lastName"/>
+    <xsl:value-of select="$delimiter"/>
+    
+    <xsl:value-of select="date"/>
+    
+    <xsl:value-of select="$newline"/>
+  </xsl:template>
+
+</xsl:stylesheet>
+
+
+//Resulting CSV Output
+// SID,firstName,lastName,date
+// 1,Sandy,Guillaumeau,1988-04-09
+// 2,Quentin,Decayeux,1990-02-01
