@@ -1,14 +1,15 @@
 project_snowflake:
   outputs:
     dev:
-      account: RNJTPPB-JHB70739
+      account: 
       database: FINALPROJECT
-      password: ******************
+      password: 
       role: ACCOUNTADMIN
       schema: RAW
       threads: 4
       type: snowflake
-      user: MOSTAFAMOHAMED
+      user: 
       warehouse: COMPUTE_WH
 
   target: dev
+
